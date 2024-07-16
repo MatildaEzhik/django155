@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}form for book{% endblock %}</title>
+</head>
+<body>
+    <h1>{% block heading %}form for book{% endblock %}</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">save</button>
+    </form>
+</body>
+</html>
